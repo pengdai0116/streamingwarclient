@@ -1,0 +1,33 @@
+<div *ngIf="stream">
+  <form [formGroup]="offerEventForm" (ngSubmit)="onSubmit()">
+    <table>
+      <tr>
+        <th><label>Stream Short Name</label></th>
+        <td><input type="text" formControlName="streamingServiceShortName" readonly placeholder="{{ stream.streamShortName }}">
+        </td>
+      </tr>
+
+      <tr>
+        <th><label>Event Name</label></th>
+        <td>
+          <select formControlName="eventName">
+            <option *ngFor="let event of events" value="{{ event.eventName }}">{{ event.eventName }}</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <th><label>Event Year</label></th>
+        <td><input type="text" formControlName="eventYear"></td>
+      </tr>
+
+      <tr>
+        <th><label>Viewing Price</label></th>
+        <td><input type="text" formControlName="viewingPrice"></td>
+      </tr>
+    </table>
+
+    <button (click)="cancel()">Cancel</button>
+    <button type="submit" [disabled]="!offerEventForm.valid">Submit</button>
+  </form>
+</div>

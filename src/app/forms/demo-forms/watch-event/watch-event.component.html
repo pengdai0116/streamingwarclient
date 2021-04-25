@@ -1,0 +1,34 @@
+<div *ngIf="demoGroup">
+  <form [formGroup]="watchEventForm" (ngSubmit)="onSubmit()">
+    <table>
+      <tr>
+        <th><label>Demographic Group Name</label></th>
+        <td><input type="text" formControlName="demoShortName" readonly placeholder="{{ demoGroup.demoShortName }}">
+        </td>
+      </tr>
+
+      <tr>
+        <th><label>Percentage</label></th>
+        <td><input type="text" formControlName="percentage"></td>
+      </tr>
+
+      <tr>
+        <th><label>Streaming Service Short Name</label></th>
+        <td><input type="text" formControlName="streamShortName"></td>
+      </tr>
+
+      <tr>
+        <th><label>Event Name</label></th>
+        <td><input type="text" formControlName="eventName"></td>
+      </tr>
+
+      <tr>
+        <th><label>Event Year</label></th>
+        <td><input type="text" formControlName="eventYear"></td>
+      </tr>
+    </table>
+
+    <button (click)="cancel()">Cancel</button>
+    <button type="submit" [disabled]="!watchEventForm.valid">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+<form [formGroup]="addStreamForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <th><label>Short Name:</label></th>
+      <td><input type="text" formControlName="streamShortName"></td>
+    </tr>
+
+    <tr>
+      <th><label>Long Name:</label></th>
+      <td><input type="text" formControlName="streamLongName"></td>
+    </tr>
+
+    <tr>
+      <th><label>Number of Subscription:</label></th>
+      <td><input type="text" formControlName="streamSubscription"></td>
+    </tr>
+  </table>
+
+  <button type="submit" [disabled]="!addStreamForm.valid">Submit</button>
+</form>

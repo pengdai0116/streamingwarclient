@@ -1,0 +1,25 @@
+<form [formGroup]="newUserForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <th><label>Username</label></th>
+      <td><input type="text" name="username" formControlName="username"></td>
+    </tr>
+
+    <tr>
+      <th><label>Password</label></th>
+      <td><input type="password" name="password" formControlName="password"></td>
+    </tr>
+
+    <tr>
+      <th><label>Role</label></th>
+      <td>
+        <input type="radio" formControlName="role" value="user" name="role">
+        <label>user</label>
+        <input type="radio" formControlName="role" value="admin" name="role">
+        <label>admin</label>
+      </td>
+    </tr>
+  </table>
+
+  <button type="submit" [disabled]="!newUserForm.valid">Submit</button>
+</form>

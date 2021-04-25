@@ -1,0 +1,24 @@
+<div *ngIf="stream">
+  <table>
+    <tr>
+      <th><label>Short Name</label></th>
+      <td><input type="text" placeholder="{{ stream.streamShortName }}" readonly/></td>
+    </tr>
+
+    <tr>
+      <th><label>Long Name</label></th>
+      <td><input type="text" placeholder="{{ stream.streamLongName }}" [(ngModel)]="stream.streamLongName"/></td>
+    </tr>
+
+    <tr>
+      <th><label>Licensing</label></th>
+      <td><input type="text" placeholder="{{ stream.streamLicensing }}" [(ngModel)]="stream.streamLicensing" [disabled]="stream.streamCurRevenue != 0"/></td>
+    </tr>
+  </table>
+
+  <div>
+    <button (click)="updateStream()">Save</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+
+</div>

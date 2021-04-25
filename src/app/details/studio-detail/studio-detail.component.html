@@ -1,0 +1,30 @@
+<div *ngIf="studio">
+  <h2>{{studio.studioLongName | uppercase}} Details</h2>
+  <table>
+    <tr>
+      <th>Id</th>
+      <td>{{ studio.id }}</td>
+    </tr>
+    <tr>
+      <th>Short Name</th>
+      <td>{{ studio.studioShortName }}</td>
+    </tr>
+    <tr>
+      <th>Long Name</th>
+      <td>{{ studio.studioLongName }}</td>
+    </tr>
+    <tr>
+      <th>Current Revenue</th>
+      <td>{{ studio.studioCurRevenue }}</td>
+    </tr>
+    <tr>
+      <th>Previous Revenue</th>
+      <td>{{ studio.studioPrevRevenue }}</td>
+    </tr>
+    <tr>
+      <th>Total Revenue</th>
+      <td>{{ studio.studioTotalRevenue }}</td>
+    </tr>
+  </table>
+  <button (click)="goBack()">Back</button>
+</div>

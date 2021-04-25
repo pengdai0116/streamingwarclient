@@ -1,0 +1,9 @@
+mat-card {
+    alignment: left;
+    max-width: 400px;
+    /*margin: 2em auto;*/
+}
+
+mat-form-field {
+    display: block;
+}

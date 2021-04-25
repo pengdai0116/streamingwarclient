@@ -1,0 +1,20 @@
+<form [formGroup]="addDemoGroupForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <th><label>Short Name</label></th>
+      <td><input type="text" formControlName="demoShortName"></td>
+    </tr>
+
+    <tr>
+      <th><label>Long Name</label></th>
+      <td><input type="text" formControlName="demoLongName"></td>
+    </tr>
+
+    <tr>
+      <th><label>Number of Accounts</label></th>
+      <td><input type="text" formControlName="demoAccounts"></td>
+    </tr>
+  </table>
+
+  <button type="submit" [disabled]="!addDemoGroupForm.valid">Submit</button>
+</form>

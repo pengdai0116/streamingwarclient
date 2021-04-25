@@ -1,0 +1,10 @@
+<ul class="streams">
+  <li *ngFor="let stream of streams" (click)="onSelect(stream)">
+    <a routerLink="/streams/{{stream.id}}">
+      {{stream.streamLongName}}
+    </a>
+  </li>
+</ul>
+
+<button routerLink="/addStream" class="btn btn-info">Add</button>
+<button (click)="goBack()">Back</button>

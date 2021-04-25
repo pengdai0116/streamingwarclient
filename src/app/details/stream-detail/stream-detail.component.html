@@ -1,0 +1,40 @@
+<div *ngIf="stream">
+  <h2>{{stream.streamLongName | uppercase}} Details</h2>
+  <table>
+    <tr>
+      <th>Id</th>
+      <td>{{ stream.id }}</td>
+    </tr>
+    <tr>
+      <th>Short Name</th>
+      <td>{{ stream.streamShortName }}</td>
+    </tr>
+    <tr>
+      <th>Long Name</th>
+      <td>{{ stream.streamLongName }}</td>
+    </tr>
+    <tr>
+      <th>Subscription</th>
+      <td>{{ stream.streamSubscription }}</td>
+    </tr>
+    <tr>
+      <th>Current Revenue</th>
+      <td>{{ stream.streamCurRevenue }}</td>
+    </tr>
+    <tr>
+      <th>Previous Revenue</th>
+      <td>{{ stream.streamPrevRevenue }}</td>
+    </tr>
+    <tr>
+      <th>Total Revenue</th>
+      <td>{{ stream.streamTotalRevenue }}</td>
+    </tr>
+    <tr>
+      <th>Licensing</th>
+      <td>{{ stream.streamLicensing }}</td>
+    </tr>
+  </table>
+  <button routerLink="updateStream">Update</button>
+  <button routerLink="offerEvent">OfferEvent Event</button>
+  <button (click)="goBack()">Back</button>
+</div>

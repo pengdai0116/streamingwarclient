@@ -1,0 +1,35 @@
+<form [formGroup]="addEventForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <th><label>Type</label></th>
+      <td>
+        <input type="radio" formControlName="eventType" value="movie">
+        <label>movie</label>
+        <input type="radio" formControlName="eventType" value="ppv">
+        <label>ppv</label>
+      </td>
+    </tr>
+    <tr>
+      <th><label>Name</label></th>
+      <td><input type="text" formControlName="eventName"></td>
+    </tr>
+    <tr>
+      <th><label>Year</label></th>
+      <td><input type="text" formControlName="eventYear"></td>
+    </tr>
+    <tr>
+      <th><label>Duration</label></th>
+      <td><input type="text" formControlName="eventDuration"></td>
+    </tr>
+    <tr>
+      <th><label>Studio</label></th>
+      <td><input type="text" formControlName="studioShortName"></td>
+    </tr>
+    <tr>
+      <th><label>License Fee</label></th>
+      <td><input type="text" formControlName="eventLicenseFee"></td>
+    </tr>
+  </table>
+
+  <button type="submit" [disabled]="!addEventForm.valid">Submit</button>
+</form>

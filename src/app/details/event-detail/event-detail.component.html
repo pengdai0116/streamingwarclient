@@ -1,0 +1,36 @@
+<div *ngIf="event">
+  <h2>{{event.eventName | uppercase}} Details</h2>
+  <table>
+    <tr>
+      <th>Id</th>
+      <td>{{ event.id }}</td>
+    </tr>
+    <tr>
+      <th>Type</th>
+      <td>{{ event.eventType }}</td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td>{{ event.eventName }}</td>
+    </tr>
+    <tr>
+      <th>Year</th>
+      <td>{{ event.eventYear }}</td>
+    </tr>
+    <tr>
+      <th>Duration</th>
+      <td>{{ event.eventDuration }}</td>
+    </tr>
+    <tr>
+      <th>Studio Short Name</th>
+      <td>{{ event.studioShortName }}</td>
+    </tr>
+    <tr>
+      <th>License Fee</th>
+      <td>{{ event.eventLicenseFee }}</td>
+    </tr>
+  </table>
+    <button routerLink="updateEvent">Update</button>
+    <button routerLink="retractEvent" *ngIf="event.eventType == 'movie'">Retract</button>
+  <button (click)="goBack()">Back</button>
+</div>

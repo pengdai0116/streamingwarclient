@@ -1,0 +1,30 @@
+<div *ngIf="event">
+  <table>
+    <tr>
+      <th><label>Short Name</label></th>
+      <td><input type="text" placeholder="{{ event.eventName }}" readonly/></td>
+    </tr>
+    <tr>
+      <th><label>Year</label></th>
+      <td><input type="text" placeholder="{{ event.eventYear }}" readonly/></td>
+    </tr>
+    <tr>
+      <th><label>Duration</label></th>
+      <td><input type="text" placeholder="{{ event.eventDuration }}"/></td>
+    </tr>
+    <tr>
+      <th><label>Studio</label></th>
+      <td><input type="text" placeholder="{{ event.studioShortName }}" readonly/></td>
+    </tr>
+    <tr>
+      <th><label>License Fee</label></th>
+      <td><input type="text" placeholder="{{ event.eventLicenseFee }}" [(ngModel)]="event.eventLicenseFee"/></td>
+    </tr>
+  </table>
+
+  <div>
+    <button (click)="updateEvent()">Save</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+
+</div>

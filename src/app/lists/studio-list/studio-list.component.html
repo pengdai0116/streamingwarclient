@@ -1,0 +1,10 @@
+<ul class="studios">
+  <li *ngFor="let studio of studios" (click)="onSelect(studio)">
+    <a routerLink="/studios/{{studio.id}}">
+      {{studio.studioLongName}}
+    </a>
+  </li>
+</ul>
+
+<button routerLink="/addStudio" class="btn btn-info">Add</button>
+<button (click)="goBack()">Back</button>

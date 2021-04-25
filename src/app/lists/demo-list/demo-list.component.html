@@ -1,0 +1,9 @@
+<ul class="demos">
+  <li *ngFor="let demoGroup of demoGroups" (click)="onSelect(demoGroup)">
+    <a routerLink="/demoGroups/{{demoGroup.id}}">
+      {{demoGroup.demoLongName}}
+    </a>
+  </li>
+</ul>
+<button routerLink="/addDemoGroup" class="btn btn-info">Add</button>
+<button (click)="goBack()">Back</button>

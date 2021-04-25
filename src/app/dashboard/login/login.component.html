@@ -1,0 +1,49 @@
+<div *ngIf="!authService.isLoggedIn">
+    <mat-card>
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Username" formControlName="username" required>
+                    <mat-error>
+                        Please provide a valid username
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input">
+                    <input matInput type="password" placeholder="Password" formControlName="password" required>
+                    <mat-error>
+                        Please provide a valid password
+                    </mat-error>
+                </mat-form-field>
+                <br>
+
+                <input type="radio" formControlName="role" value="user" name="role">
+                <label>user</label>
+                <input type="radio" formControlName="role" value="admin" name="role">
+                <label>admin</label>
+
+                <button mat-raised-button color="accent">Login</button>
+
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+
+<div *ngIf="message">
+    <a>{{message}}</a>
+</div>
+
+<div *ngIf="authService.isLoggedIn">
+    <nav>
+        <a *ngIf="authService.isAdminLoggedIn" routerLink="/admin">Admin</a>
+        <a routerLink="/demoGroups">Demographic Groups</a>
+        <a routerLink="/streams">Streaming Services</a>
+        <a routerLink="/studios">Production Studios</a>
+        <a routerLink="/events">Events</a>
+        <a routerLink="/offerEvents">Offers</a>
+        <a (click)="logout()">Logout</a>
+    </nav>
+
+    <p>Welcome {{loginForm.controls.username.value}}!</p>
+    <p>Login Time: {{currentTimePeriod}}</p>
+</div>

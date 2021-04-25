@@ -1,0 +1,10 @@
+<ul class="events">
+  <li *ngFor="let event of events" (click)="onSelect(event)">
+    <a routerLink="/events/{{event.id}}">
+      {{event.eventName}}
+    </a>
+  </li>
+</ul>
+
+<button routerLink="/addEvent" class="btn btn-info">Add</button>
+<button (click)="goBack()">Back</button>

@@ -1,0 +1,15 @@
+<form [formGroup]="addStudioForm" (ngSubmit)="onSubmit()">
+  <table>
+    <tr>
+      <th><label>Short Name</label></th>
+      <td><input type="text" formControlName="studioShortName"></td>
+    </tr>
+
+    <tr>
+      <th><label>Long Name</label></th>
+      <td><input type="text" formControlName="studioLongName"></td>
+    </tr>
+  </table>
+
+  <button type="submit" [disabled]="!addStudioForm.valid">Submit</button>
+</form>

@@ -1,0 +1,9 @@
+<ul class="offerEvents">
+  <li *ngFor="let offer of offerEvents" (click)="onSelect(offer)">
+    <a routerLink="/offerEvents/{{offer.id}}">
+      {{offer.streamingServiceShortName}} - {{offer.eventName}},{{offer.eventYear}}
+    </a>
+  </li>
+</ul>
+
+<button (click)="goBack()">Back</button>

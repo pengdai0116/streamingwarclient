@@ -1,0 +1,36 @@
+<div *ngIf="demoGroup">
+  <h2>{{demoGroup.demoLongName | uppercase}} Details</h2>
+  <table>
+    <tr>
+      <th>Id</th>
+      <td>{{ demoGroup.id }}</td>
+    </tr>
+    <tr>
+      <th>Short Name</th>
+      <td>{{ demoGroup.demoShortName }}</td>
+    </tr>
+    <tr>
+      <th>Long Name</th>
+      <td>{{ demoGroup.demoLongName }}</td>
+    </tr>
+    <tr>
+      <th>Number of Accounts</th>
+      <td>{{ demoGroup.demoAccounts }}</td>
+    </tr>
+    <tr>
+      <th>Current Spending</th>
+      <td>{{ demoGroup.demoCurSpending }}</td>
+    </tr>
+    <tr>
+      <th>Previous Spending</th>
+      <td>{{ demoGroup.demoPrevSpending }}</td>
+    </tr>
+    <tr>
+      <th>Total Spending</th>
+      <td>{{ demoGroup.demoTotalSpending }}</td>
+    </tr>
+  </table>
+    <button routerLink="updateDemo">Update</button>
+    <button routerLink="watchEvent">Watch Event</button>
+    <button (click)="goBack()">Back</button>
+</div>

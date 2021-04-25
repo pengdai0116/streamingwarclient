@@ -1,0 +1,24 @@
+<div *ngIf="demoGroup">
+  <table>
+    <tr>
+      <th><label>Short Name</label></th>
+      <td><input type="text" placeholder="{{ demoGroup.demoShortName }}" readonly/></td>
+    </tr>
+
+    <tr>
+      <th><label>Long Name</label></th>
+      <td><input type="text" placeholder="{{ demoGroup.demoLongName }}" [(ngModel)]="demoGroup.demoLongName"/></td>
+    </tr>
+
+    <tr>
+      <th><label>Number of Accounts</label></th>
+      <td><input type="text" placeholder="{{ demoGroup.demoAccounts }}" [(ngModel)]="demoGroup.demoAccounts" [disabled]="demoGroup.demoCurSpending != 0"/></td>
+    </tr>
+  </table>
+
+  <div>
+    <button (click)="updateDemoGroup()">Save</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+
+</div>

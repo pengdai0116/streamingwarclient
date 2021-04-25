@@ -1,0 +1,33 @@
+.studios {
+  margin: 0 0 2em 0;
+  list-style-type: decimal;
+  width: 40em;
+}
+
+.studios li {
+  position: relative;
+  cursor: pointer;
+}
+
+.studios li:hover {
+  left: .1em;
+}
+
+.studios a {
+  color: #333;
+  text-decoration: none;
+  background-color: #EEE;
+  margin: .5em;
+  display: block;
+  width: 100%;
+}
+
+.studios a:hover {
+  color: #2c3a41;
+  background-color: #e6e6e6;
+}
+
+.studios a:active {
+  background-color: #525252;
+  color: #fafafa;
+}

@@ -1,0 +1,26 @@
+<div *ngIf="offerEvent">
+  <h2>{{offerEvent.eventName | uppercase}} Offered by {{offerEvent.streamingServiceShortName | uppercase}}</h2>
+  <table>
+    <tr>
+      <th>Id</th>
+      <td>{{ offerEvent.id }}</td>
+    </tr>
+    <tr>
+      <th>Event Name</th>
+      <td>{{ offerEvent.eventName }}</td>
+    </tr>
+    <tr>
+      <th>Event Year</th>
+      <td>{{ offerEvent.eventYear }}</td>
+    </tr>
+    <tr>
+      <th>Streaming Service Name</th>
+      <td>{{ offerEvent.streamingServiceShortName }}</td>
+    </tr>
+    <tr>
+      <th>Viewing Price</th>
+      <td>{{ offerEvent.viewingPrice }}</td>
+    </tr>
+  </table>
+  <button (click)="goBack()">Back</button>
+</div>
